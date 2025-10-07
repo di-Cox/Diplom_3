@@ -13,11 +13,10 @@ class PersonalAccountPage(BasePage):
         self.navigate_to_page(USER_ACCOUNT_PAGE)
         self.wait_for_element_visible(MainPageLocators.CONSTRUCTOR_TAB)
 
-
     @allure.step('Авторизация в системе')
-    def login_to_system(self):
+    def login_to_system(self, email, password):
         self.navigate_to_account_page()
-        self.fill_field(AccountPageLocators.INPUT_EMAIL, data.UserData.user_email)
-        self.fill_field(AccountPageLocators.INPUT_PASSWORD, data.UserData.user_password)
+        self.fill_field(AccountPageLocators.INPUT_EMAIL, email)
+        self.fill_field(AccountPageLocators.INPUT_PASSWORD, password)
         self.click_on_element(AccountPageLocators.SIGNIN_BUTTON_FORM)
         self.wait_for_element_visible(MainPageLocators.CONSTRUCTOR_TITLE)

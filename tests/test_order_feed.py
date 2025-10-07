@@ -14,8 +14,12 @@ class TestOrderFeedPage:
         order_feed_page = OrderFeedPage(driver)
         home_page = HomePage(driver)
 
+        # ДАННЫЕ ИЗ ТЕЛА ТЕСТА
+        test_email = data.UserData.user_email
+        test_password = data.UserData.user_password
+
         with allure.step('Авторизация в системе'):
-            account_page.login_to_system()
+            account_page.login_to_system(test_email, test_password)
 
         with allure.step('Переход в ленту заказов'):
             order_feed_page.click_order_feed_tab()
@@ -49,8 +53,12 @@ class TestOrderFeedPage:
         order_feed_page = OrderFeedPage(driver)
         home_page = HomePage(driver)
 
+        # ДАННЫЕ ИЗ ТЕЛА ТЕСТА
+        test_email = data.UserData.user_email
+        test_password = data.UserData.user_password
+
         with allure.step('Авторизация в системе'):
-            account_page.login_to_system()
+            account_page.login_to_system(test_email, test_password)
 
         with allure.step('Переход в ленту заказов'):
             order_feed_page.click_order_feed_tab()
@@ -84,8 +92,12 @@ class TestOrderFeedPage:
         order_feed_page = OrderFeedPage(driver)
         home_page = HomePage(driver)
 
+        # ДАННЫЕ ИЗ ТЕЛА ТЕСТА
+        test_email = data.UserData.user_email
+        test_password = data.UserData.user_password
+
         with allure.step('Авторизация в системе'):
-            account_page.login_to_system()
+            account_page.login_to_system(test_email, test_password)
 
         with allure.step('Создание заказа'):
             order_feed_page.click_constructor_tab()
