@@ -18,7 +18,7 @@ class OrderFeedPageLocators:
     TODAY_ORDERS_COUNT = (By.XPATH, "//div[@class='OrderFeed_ordersData__1L6Iv']//p[contains(text(), 'Выполнено за сегодня:')]/following-sibling::p")
 
     ORDER_ID_MODAL = (By.XPATH, "//h2[contains(@class, 'Modal_modal__title') and normalize-space(text())]")
-    CLOSE_ORDER_MODAL = (By.XPATH, "//section[contains(@class, 'Modal_modal_opened')]//button")
+    CLOSE_ORDER_MODAL = (By.XPATH, "//button[contains(@class, 'Modal_modal__close')]")
 
     CURRENT_ORDERS_LIST = (By.XPATH, "//ul[contains(@class, 'OrderFeed_orderList')]/li[1]")
     ORDER_ID_IN_FEED = (By.XPATH, "//ul[contains(@class, 'OrderFeed_list')]/li[1]//p[contains(@class,'text_type_digits')]")
@@ -28,4 +28,3 @@ class OrderFeedPageLocators:
     LOADING_OVERLAY = (By.XPATH, "//div[@class='Modal_modal_opened__3ISw4 Modal_modal__P3_V5']//div[@class='Modal_modal_overlay__x2ZCr']")
     MODAL_OVERLAY_SECTION = (By.XPATH, "//section[contains(@class,'Modal_modal__P3_V5')]")
     MODAL_OVERLAY_DIV = (By.XPATH, "//div[contains(@class,'Modal_modal__P3_V5')]")
-    

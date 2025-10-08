@@ -91,3 +91,10 @@ class BasePage:
             lambda _: self.get_text_from_element(locator) != initial_text, timeout
         )
         return self.wait_for_element_visible(locator)
+
+    @allure.step("Клик по элементу через JavaScript")
+    def click_via_javascript(self, locator, wait_time=10):
+        element = WebDriverWait(self.web_driver, wait_time).until(
+            EC.presence_of_element_located(locator)
+        )
+        self.web_driver.execute_script("arguments[0].click();", element)

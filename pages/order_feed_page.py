@@ -58,7 +58,7 @@ class OrderFeedPage(BasePage):
 
     @allure.step('Клик по кнопке закрытия модального окна заказа')
     def click_close_order_modal(self):
-        self.click_on_element(OrderFeedPageLocators.CLOSE_ORDER_MODAL)
+        self.click_via_javascript(OrderFeedPageLocators.CLOSE_ORDER_MODAL)
 
 
     @allure.step('Ожидание и получение номера заказа')
